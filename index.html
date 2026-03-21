@@ -80,11 +80,7 @@
   .channel-info { padding:9px 10px 11px; }
   .channel-num { font-size:10px;font-weight:600;color:var(--accent2);letter-spacing:.5px;margin-bottom:3px; }
   .channel-name { font-size:12px;font-weight:600;color:var(--text);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
-  .live-row { display:flex;align-items:center;gap:4px;margin-top:5px; }
-  .live-dot { width:5px;height:5px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0; }
-  .live-label { font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px; }
 
-  /* Stream link buttons - stile DTTstream */
   .ch-links {
     display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;
   }
@@ -166,7 +162,7 @@
 const channels = [
   { num:"001", name:"Rai 1",                   logo:"https://i.ibb.co/qMcsYXFB/101-rai-1-it.png",                    group:"RAI", url:"https://viamotionhsi.netplus.ch/live/eds/rai1/browser-HLS8/rai1.m3u8", url2:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=16", url3:"https://ilglobotv-live.akamaized.net/channels/RAI1/Live.m3u8" },
   { num:"002", name:"Rai 2",                   logo:"https://i.ibb.co/zHZXx5Hw/102-rai-2-it.png",                    group:"RAI", url:"https://viamotionhsi.netplus.ch/live/eds/rai2/browser-HLS8/rai2.m3u8", url2:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718&output=16", url3:"https://ilglobotv-live.akamaized.net/channels/RAI2/Live.m3u8" },
-  { num:"003", name:"Rai 3",                   logo:"https://i.ibb.co/cqKGmMb/103-rai-3-it.png",                     group:"RAI", url:"https://ilglobotv-live.akamaized.net/channels/RAI3/Live.m3u8", url2:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=16" , url3:"https://viamotionhsi.netplus.ch/live/eds/rai3/browser-HLS8/rai3.m3u8" },
+  { num:"003", name:"Rai 3",                   logo:"https://i.ibb.co/cqKGmMb/103-rai-3-it.png",                     group:"RAI", url:"https://ilglobotv-live.akamaized.net/channels/RAI3/Live.m3u8", url2:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=16", url3:"https://viamotionhsi.netplus.ch/live/eds/rai3/browser-HLS8/rai3.m3u8" },
   { num:"004", name:"Rete 4",                  logo:"https://i.ibb.co/jk3Fb0W0/104-rete4-it.png",                    group:"MEDIASET", url:"https://live02-seg.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/index.m3u8" },
   { num:"005", name:"Canale 5",                logo:"https://i.ibb.co/XfCQpn47/105-canale5-it.png",                  group:"MEDIASET", url:"https://live02-seg.msf.cdn.mediaset.net/live/ch-c5/c5-clr.isml/index.m3u8" },
   { num:"006", name:"Italia 1",                logo:"https://i.ibb.co/Jj0PL8dX/106-italia1-it.png",                  group:"MEDIASET", url:"https://live02-seg.msf.cdn.mediaset.net/live/ch-i1/i1-clr.isml/index.m3u8" },
@@ -259,27 +255,92 @@ const channels = [
   { num:"098", name:"Platinum Sport",          logo:"https://i.ibb.co/Gv4S7hyX/platinum.png",                        group:"WEB", url:"https://platinsport.com/" },
   { num:"099", name:"Livetv",                  logo:"https://i.ibb.co/ynR2GHC7/livetv.jpg",                          group:"WEB", url:"https://livetv.sx/it/" },
   { num:"100", name:"Daddilive",               logo:"https://i.ibb.co/cKZj9yqv/daddy.png",                           group:"WEB", url:"https://dlstreams.top/" },
-  { num:"101", name:"RSI La 1",                logo:"http://odmsto.com/uploads/tv_image/sm/rsi-la1.png",                        group:"INTERNAZIONALE", url:"https://viamotionhsi.netplus.ch/live/eds/rsila1hd/browser-HLS8/rsila1hd.m3u8" },
-  { num:"102", name:"RSI La 2",                logo:"http://odmsto.com/uploads/tv_image/sm/rsi-la2-i2lwhb01iqwr.png",                        group:"INTERNAZIONALE", url:"https://viamotionhsi.netplus.ch/live/eds/rsila2hd/browser-HLS8/rsila2hd.m3u8" },
+  { num:"101", name:"RSI La 1",                logo:"http://odmsto.com/uploads/tv_image/sm/rsi-la1.png",             group:"INTERNAZIONALE", url:"https://viamotionhsi.netplus.ch/live/eds/rsila1hd/browser-HLS8/rsila1hd.m3u8" },
+  { num:"102", name:"RSI La 2",                logo:"http://odmsto.com/uploads/tv_image/sm/rsi-la2-i2lwhb01iqwr.png", group:"INTERNAZIONALE", url:"https://viamotionhsi.netplus.ch/live/eds/rsila2hd/browser-HLS8/rsila2hd.m3u8" },
   { num:"103", name:"RTV",                     logo:"http://odmsto.com/uploads/tv_image/sm/rtv-smarino.png",         group:"INTERNAZIONALE", url:"https://www.sanmarinortv.sm/programmi/web-tv" },
   { num:"104", name:"RTV Sport",               logo:"http://odmsto.com/uploads/tv_image/sm/rtv-smarino-sport.png",   group:"INTERNAZIONALE", url:"https://www.sanmarinortv.sm/programmi/web-tv-sport" },
   { num:"108", name:"Sky UNO",                 logo:"https://i.ibb.co/HfGrqCwX/108-sky-uno-it.png",                  group:"SKY", url:"https://xer94x.github.io/tv/SKYUNO.html" },
   { num:"112", name:"Sky Serie",               logo:"https://i.ibb.co/bM00GndD/112-sky-serie-it.png",                group:"SKY", url:"https://xer94x.github.io/tv/SKYSERIE.html" },
-  { num:"200", name:"Sky Sport 24",            logo:"https://i.ibb.co/KjsLXQpw/200-sky-sport-24-it.png",             group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORT24.html",      url2:"https://xer94x.github.io/tv/sky-sport-24-it.html" },
-  { num:"201", name:"Sky Sport UNO",           logo:"https://i.ibb.co/TdjtqJx/201-sky-sport-uno-it.png",             group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTUNO.html",     url2:"https://xer94x.github.io/tv/sky-sport-uno-it.html" },
-  { num:"202", name:"Sky Sport Calcio",        logo:"https://i.ibb.co/xSzDbc4t/202-sky-sport-calcio-it.png",         group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTCALCIO.html",  url2:"https://xer94x.github.io/tv/sky-sport-calcio-it.html" },
-  { num:"203", name:"Sky Sport Tennis",        logo:"https://i.ibb.co/p6zyRkvR/203-sky-sport-tennis-it.png",         group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTTENNIS.html",  url2:"https://xer94x.github.io/tv/sky-sport-tennis-it.html" },
-  { num:"204", name:"Sky Sport Arena",         logo:"https://i.ibb.co/whBhzVtn/204-sky-sport-arena-it.png",          group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTARENA.html",   url2:"https://xer94x.github.io/tv/sky-sport-arena-it.html" },
-  { num:"205", name:"Sky Sport Basket",        logo:"https://i.ibb.co/R4dWTk14/205-sky-sport-it.png",                group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTBASKET.html",  url2:"https://xer94x.github.io/tv/sky-sport-basket-it.html" },
-  { num:"206", name:"Sky Sport MAX",           logo:"https://i.ibb.co/nqjx0yw5/206-sky-sport-max-it.png",            group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTMAX.html",     url2:"https://xer94x.github.io/tv/sky-sport-max-it.html" },
-  { num:"207", name:"Sky Sport F1",            logo:"https://i.ibb.co/20tDZcbD/207-sky-sport-f1-it.png",             group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTF1.html",      url2:"https://xer94x.github.io/tv/sky-sport-f1-it.html" },
-  { num:"208", name:"Sky Sport MotoGP",        logo:"https://i.ibb.co/LXTpB4ms/208-sky-sport-motogp-it.png",         group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTMOTOGP.html",  url2:"https://xer94x.github.io/tv/sky-sport-moto-gp-it.html" },
-  { num:"209", name:"Sky Sports Golf",         logo:"https://i.ibb.co/HvC5fbK/209-sky-sport-golf-it.png",            group:"SKY", url:"https://xer94x.github.io/tv/SKYSPORTSGOLF.html",   url2:"https://xer94x.github.io/tv/sky-sport-golf-it.html" },
-  { num:"209", name:"Sky Sports Legend",       logo:"https://i.ibb.co/r2qWYmqj/212-sky-sport-legend-it.png",            group:"SKY", url:"",   url2:"" },
-  { num:"211", name:"Sky Sport Mix",           logo:"https://i.ibb.co/cXYSBfRP/211-sky-sport-mix-it.png",            group:"SKY", url:"https://xer94x.github.io/tv/sky-sport-mix-it.html" },
-  { num:"212", name:"EuroSport 1",             logo:"https://i.ibb.co/994HHVQS/eurosport1.png",                      group:"SKY", url:"https://xer94x.github.io/tv/EUROSPORT1.html",      url2:"https://xer94x.github.io/tv/eurosport-1-it.html" },
-  { num:"213", name:"EuroSport 2",             logo:"https://i.ibb.co/PswYht9n/eurosport-2.png",                     group:"SKY", url:"https://xer94x.github.io/tv/EUROSPORT2.html",      url2:"https://xer94x.github.io/tv/eurosport-2-it.html" },
-  { num:"214", name:"DAZN ZONA",               logo:"https://i.ibb.co/FL150v26/214-zona-dazn-it.png",                group:"SKY", url:"https://xer94x.github.io/tv/DAZNZONA.html",        url2:"https://xer94x.github.io/tv/zona-dazn-it.html" },
+  { num:"200", name:"Sky Sport 24",            logo:"https://i.ibb.co/KjsLXQpw/200-sky-sport-24-it.png",             group:"SKY",
+    url:"https://xer94x.github.io/tv/SKYSPORT24.html",
+    url2:"https://xer94x.github.io/tv/sky-sport-24-it.html" },
+
+  // ── SKY SPORT con SCR (url) + MH (url2) + vecchi link (url3/url4) ──
+  { num:"201", name:"Sky Sport UNO",           logo:"https://i.ibb.co/TdjtqJx/201-sky-sport-uno-it.png",             group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/230/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/326/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTUNO.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-uno-it.html" },
+
+  { num:"202", name:"Sky Sport Calcio",        logo:"https://i.ibb.co/xSzDbc4t/202-sky-sport-calcio-it.png",         group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/232/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/333/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTCALCIO.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-calcio-it.html" },
+
+  { num:"203", name:"Sky Sport Tennis",        logo:"https://i.ibb.co/p6zyRkvR/203-sky-sport-tennis-it.png",         group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/233/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/329/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTTENNIS.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-tennis-it.html" },
+
+  { num:"204", name:"Sky Sport Arena",         logo:"https://i.ibb.co/whBhzVtn/204-sky-sport-arena-it.png",          group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/235/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/331/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTARENA.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-arena-it.html" },
+
+  { num:"205", name:"Sky Sport Basket",        logo:"https://i.ibb.co/R4dWTk14/205-sky-sport-it.png",                group:"SKY",
+    url:"https://xer94x.github.io/tv/SKYSPORTBASKET.html",
+    url2:"https://xer94x.github.io/tv/sky-sport-basket-it.html" },
+
+  { num:"206", name:"Sky Sport MAX",           logo:"https://i.ibb.co/nqjx0yw5/206-sky-sport-max-it.png",            group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/236/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/332/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTMAX.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-max-it.html" },
+
+  { num:"207", name:"Sky Sport F1",            logo:"https://i.ibb.co/20tDZcbD/207-sky-sport-f1-it.png",             group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/231/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/327/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTF1.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-f1-it.html" },
+
+  { num:"208", name:"Sky Sport MotoGP",        logo:"https://i.ibb.co/LXTpB4ms/208-sky-sport-motogp-it.png",         group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/234/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/330/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTMOTOGP.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-moto-gp-it.html" },
+
+  { num:"209", name:"Sky Sports Golf",         logo:"https://i.ibb.co/HvC5fbK/209-sky-sport-golf-it.png",            group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/2237/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/237/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/SKYSPORTSGOLF.html",
+    url4:"https://xer94x.github.io/tv/sky-sport-golf-it.html" },
+
+  { num:"209", name:"Sky Sports Legend",       logo:"https://i.ibb.co/r2qWYmqj/212-sky-sport-legend-it.png",         group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/240/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/336/index.m3u8?token=T4Nz6WCt2Uwlqma4" },
+
+  { num:"211", name:"Sky Sport Mix",           logo:"https://i.ibb.co/cXYSBfRP/211-sky-sport-mix-it.png",            group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/241/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/337/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/sky-sport-mix-it.html" },
+
+  { num:"212", name:"EuroSport 1",             logo:"https://i.ibb.co/994HHVQS/eurosport1.png",                      group:"SKY",
+    url:"https://xer94x.github.io/tv/EUROSPORT1.html",
+    url2:"https://xer94x.github.io/tv/eurosport-1-it.html" },
+
+  { num:"213", name:"EuroSport 2",             logo:"https://i.ibb.co/PswYht9n/eurosport-2.png",                     group:"SKY",
+    url:"https://xer94x.github.io/tv/EUROSPORT2.html",
+    url2:"https://xer94x.github.io/tv/eurosport-2-it.html" },
+
+  { num:"214", name:"DAZN ZONA",               logo:"https://i.ibb.co/FL150v26/214-zona-dazn-it.png",                group:"SKY",
+    url:"https://cc1.screenistream.xyz:8080/stream/229/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url2:"https://cc3.screenistream.xyz:8080/stream/325/index.m3u8?token=T4Nz6WCt2Uwlqma4",
+    url3:"https://xer94x.github.io/tv/DAZNZONA.html",
+    url4:"https://xer94x.github.io/tv/zona-dazn-it.html" },
+
   { num:"230", name:"Milan TV",                logo:"https://i.ibb.co/7JjWdcgr/470-milan-tv-it.png",                 group:"SPORT", url:"https://xer94x.github.io/tv/MilanTV.html" },
   { num:"231", name:"Juventus Play",           logo:"https://i.ibb.co/DHcjJkY1/juveventusplay.webp",                 group:"SPORT", url:"https://amg27604-amg27604c3-amgplt0148.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg27604-amg27604c3-amgplt0148/playlist.m3u8" },
   { num:"232", name:"Inter TV",                logo:"https://i.ibb.co/qYkxLj4b/471-inter-tv-it.png",                 group:"SPORT", url:"https://ilglobotv-live.akamaized.net/channels/InterTV/Live.m3u8" },
@@ -325,17 +386,15 @@ function render(){
     card.style.animationDelay = Math.min(i*0.012, 0.5)+'s';
     card.addEventListener('click', () => window.open(ch.url, '_blank', 'noopener'));
 
-    // Conta gli stream disponibili
-    const streams = [ch.url, ch.url2, ch.url3].filter(Boolean);
+    const streams = [ch.url, ch.url2, ch.url3, ch.url4].filter(Boolean);
 
-    // Costruisce i bottoni stream
     let linksHtml = '<div class="ch-links">';
     if (streams.length === 1) {
-      linksHtml += `<a class="lnk-btn" href="${streams[0]}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶ Guarda</a>`;
+      linksHtml += `<a class="lnk-btn" href="${streams[0]}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Guarda</a>`;
     } else {
       streams.forEach((url, idx) => {
         const cls = idx === 0 ? 'lnk-btn' : 'lnk-btn alt';
-        linksHtml += `<a class="${cls}" href="${url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶ ${idx + 1}</a>`;
+        linksHtml += `<a class="${cls}" href="${url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${idx + 1}</a>`;
       });
     }
     linksHtml += '</div>';
@@ -356,7 +415,6 @@ function render(){
   });
 }
 
-// Build filter chips
 const allGroups = ['Tutti', ...new Set(channels.map(c => c.group).filter(Boolean))];
 let activeGroup = 'Tutti';
 (function buildChips(){
