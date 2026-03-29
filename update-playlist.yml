@@ -1,0 +1,35 @@
+name: Update IPTV Playlist
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # ogni giorno alle 06:00 UTC
+  workflow_dispatch:       # esecuzione manuale dal pannello GitHub
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa dipendenze
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Esegui script fetch playlist
+        run: python scripts/fetch_playlist.py
+
+      - name: Commit e push se ci sono modifiche
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add playlist.m3u
+          git diff --cached --quiet || git commit -m "🔄 Aggiorna playlist - $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
