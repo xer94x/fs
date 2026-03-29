@@ -1,1 +1,33 @@
 #EXTM3U
+#EXTINF:-1 tvg-chno="1" tvg-logo="https://www.freeshot.live/upload/source/sky-sport-uno-logo.png" group-title="Sky Sport",Sky Sport Uno IT
+https://beautifulpeople.lovecdn.ru/SkySportUnoIT/index.m3u8?token=U2t5U3BvcnRVbm9JVHxub19jaGVja19pcHwxNzc0ODA2Nzgx.02ad6804ac3b36debd268c5acb21c3aa8610745a4ec0c6e83e0fcc66edfc3d59
+#EXTINF:-1 tvg-chno="2" tvg-logo="https://www.freeshot.live/upload/source/SkySportCalcio-logo.png" group-title="Sky Sport",Sky Sport Calcio IT
+https://planetary.lovecdn.ru/SkySportCalcioIT/index.m3u8?token=U2t5U3BvcnRDYWxjaW9JVHxub19jaGVja19pcHwxNzc0ODA2ODEz.bf5689973c047094700bf1b9e6df1166f77aebcebb7f80f99659d067a0a69ef5
+#EXTINF:-1 tvg-chno="3" tvg-logo="https://www.freeshot.live/upload/source/sky-sport-F1-logo.png" group-title="Sky Sport",Sky Sport F1 IT
+https://planetary.lovecdn.ru/SkySportF1IT/index.m3u8?token=U2t5U3BvcnRGMUlUfG5vX2NoZWNrX2lwfDE3NzQ4MDY4NDU=.46fafeff3f65fe142a05a0a22f2edc40c39f43a04f90169664eda391ea7ef70f
+#EXTINF:-1 tvg-chno="4" tvg-logo="https://www.freeshot.live/upload/source/sky_sport_motogp_logo.png" group-title="Sky Sport",Sky Sport Moto GP IT
+https://planetary.lovecdn.ru/SkySportMotoGPIT/index.m3u8?token=U2t5U3BvcnRNb3RvR1BJVHxub19jaGVja19pcHwxNzc0ODA2ODc3.0f84ca171a2b3c5971ecbcd247a3253891c7568de2b18a872fbb258dece4e6ff
+#EXTINF:-1 tvg-chno="5" tvg-logo="https://www.freeshot.live/upload/source/Sky-sport-tennis.png" group-title="Sky Sport",Sky Sport Tennis IT
+https://planetary.lovecdn.ru/SkySportTennisIT/index.m3u8?token=U2t5U3BvcnRUZW5uaXNJVHxub19jaGVja19pcHwxNzc0ODA2OTEw.b6e611e11594e46b3514628ceb5b95b96124463dc89833eb2bd33d0d1b1acfdf
+#EXTINF:-1 tvg-chno="6" tvg-logo="https://www.freeshot.live/upload/source/SkySportGolfIT-logo.png" group-title="Sky Sport",Sky Sport Golf IT
+https://beautifulpeople.lovecdn.ru/SkySportGolfIT/index.m3u8?token=U2t5U3BvcnRHb2xmSVR8bm9fY2hlY2tfaXB8MTc3NDgwNjk0MQ==.7546fd1ff6af70a79fe852c9aec56729eb1ea9f3d1e903206b7a562705c4c79a
+#EXTINF:-1 tvg-chno="7" tvg-logo="https://www.freeshot.live/upload/source/sky-sport-basket-logo.png" group-title="Sky Sport",Sky Sport Basket IT
+https://beautifulpeople.lovecdn.ru/SkySportNBAIT/index.m3u8?token=U2t5U3BvcnROQkFJVHxub19jaGVja19pcHwxNzc0ODA2OTcz.c03047c5bf48e6327fc7658c38022ae855d874e2653ba540dd6994abc31ae2b9
+#EXTINF:-1 tvg-chno="8" tvg-logo="https://www.freeshot.live/upload/source/Sky-Sport-Max-logo.png" group-title="Sky Sport",Sky Sport Max IT
+https://beautifulpeople.lovecdn.ru/SkySportMaxIT/index.m3u8?token=U2t5U3BvcnRNYXhJVHxub19jaGVja19pcHwxNzc0ODA3MDA1.805582060c3d4bcbbf81c82aab5b83e432955e3fe4ca65fc79290d0948e141c4
+#EXTINF:-1 tvg-chno="9" tvg-logo="https://www.freeshot.live/upload/source/Sky-Sport-Mix-logo.png" group-title="Sky Sport",Sky Sport Mix IT
+https://beautifulpeople.lovecdn.ru/SkySportMixIT/index.m3u8?token=U2t5U3BvcnRNaXhJVHxub19jaGVja19pcHwxNzc0ODA3MDM4.729deda148eba57ba755266d6f787c31fbd8fe48a82454368ffa977431f2945e
+#EXTINF:-1 tvg-chno="10" tvg-logo="https://www.freeshot.live/upload/source/Sky_Sport_Arena-Logo.png" group-title="Sky Sport",Sky Sports Arena IT
+https://planetary.lovecdn.ru/SkySportArenaIT/index.m3u8?token=U2t5U3BvcnRBcmVuYUlUfG5vX2NoZWNrX2lwfDE3NzQ4MDcwNzA=.bd0d875d2f6861038a1bcae50d480a2514a4be8861339013504723190b591cf1
+#EXTINF:-1 tvg-chno="11" tvg-logo="https://www.freeshot.live/upload/source/SkySport24-logo.png" group-title="Sky Sport",Sky Sport 24 IT
+https://planetary.lovecdn.ru/SkySport24IT/index.m3u8?token=U2t5U3BvcnQyNElUfG5vX2NoZWNrX2lwfDE3NzQ4MDcxMDI=.173d81f4e42b0c34b7534e1b6cf20de64ef498dc6e2aa1aa08a393d61e356a98
+#EXTINF:-1 tvg-chno="12" tvg-logo="https://www.freeshot.live/upload/source/ZonaDAZN-logo.png" group-title="DAZN",Zona DAZN IT
+https://planetary.lovecdn.ru/ZonaDAZN/index.m3u8?token=Wm9uYURBWk58bm9fY2hlY2tfaXB8MTc3NDgwNzEzNA==.958436c223155560e531cda90348a0db8c0cdac8516ad14cb4d009b91907295d
+#EXTINF:-1 tvg-chno="13" tvg-logo="https://www.freeshot.live/upload/source/Eurosport_1_logo.png" group-title="Sport",Eurosport 1 IT
+https://beautifulpeople.lovecdn.ru/euro1it/index.m3u8?token=ZXVybzFpdHxub19jaGVja19pcHwxNzc0ODA3MTY2.bf8b26db5d18fbc4ac393ad069c338bada312107c17ebeb18ef1f0d00dc9e9c6
+#EXTINF:-1 tvg-chno="14" tvg-logo="https://www.freeshot.live/upload/source/Eurosport_2_logo.png" group-title="Sport",Eurosport 2 IT
+https://planetary.lovecdn.ru/euro2it/index.m3u8?token=ZXVybzJpdHxub19jaGVja19pcHwxNzc0ODA3MTk4.59069b489fce4e1dcafe74cd652802c89423fae9b2be13ac478055d3be283942
+#EXTINF:-1 tvg-chno="15" tvg-logo="https://www.freeshot.live/upload/source/Milan-TV-logo.png" group-title="Sport",Milan TV
+https://planetary.lovecdn.ru/MilanTV/index.m3u8?token=TWlsYW5UVnxub19jaGVja19pcHwxNzc0ODA3MjMx.b7044bf99450886d52feb6e26ae4a15cf05a8c0297d56fbdeb0ccc667de8320d
+#EXTINF:-1 tvg-chno="16" tvg-logo="https://www.freeshot.live/upload/source/InterTV-logo.png" group-title="Sport",Inter TV
+https://beautifulpeople.lovecdn.ru/InterTV/index.m3u8?token=SW50ZXJUVnxub19jaGVja19pcHwxNzc0ODA3MjYy.425b0018f0f654a05dbc4fb155a391dc2583a3184a1d56958b27312768238da8
